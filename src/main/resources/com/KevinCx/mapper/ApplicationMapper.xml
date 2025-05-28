@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.KevinCx.mapper.ApplicationMapper">
+    <update id="update" parameterType="com.KevinCx.domain.pojo.Application">
+        update application
+        <set>
+            <if test="applicationReason!= null and applicationReason!= ''">
+                application_reason = #{applicationReason},
+            </if>
+            <if test="status!= null and status!= ''">
+                status = #{status},
+            </if>
+            <if test="reviewComments!= null and reviewComments!= ''">
+                review_comments = #{reviewComments},
+            </if>
+            <if test="reviewedBy!= null and reviewedBy!= ''">
+                reviewed_by = #{reviewedBy},
+            </if>
+            <if test="applicationTime != null">
+                application_time = #{applicationTime},
+            </if>
+            <if test="reviewTime != null">
+                review_time = #{reviewTime},
+            </if>
+            <if test="createdTime != null">
+                created_time = #{createdTime},
+            </if>
+            <if test="updatedTime != null">
+                updated_time = #{updatedTime},
+            </if>
+            <if test="deletedTime != null">
+                deleted_time = #{deletedTime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+    <select id="pageQuery" resultType="com.KevinCx.domain.pojo.Application"
+            parameterType="com.KevinCx.domain.query.ApplicationQuery">
+        select * from application
+        <where>
+            <if test="userId != null and userId != 0">
+                and user_id = #{userId}
+            </if>
+            <if test="animalId!= null and animalId!= 0">
+                and animal_id = #{animalId}
+            </if>
+            <if test="status!= null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+
+</mapper>

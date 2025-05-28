@@ -1,0 +1,22 @@
+INSERT INTO user (username, password, email, phone, role, status, profile_picture, created_time, updated_time)
+VALUES
+    ('user1',  '202cb962ac59075b964b07152d234b70', 'user1@example.com',  '13000000001', 0, 0, 'https://example.com/avatar1.png',  '2024-01-01 10:00:00', '2024-01-02 10:00:00'),
+    ('user2',  '202cb962ac59075b964b07152d234b70', 'user2@example.com',  '13000000002', 0, 1, 'https://example.com/avatar2.png',  '2024-01-02 10:00:00', '2024-01-03 10:00:00'),
+    ('user3',  '202cb962ac59075b964b07152d234b70', 'user3@example.com',  '13000000003', 1, 0, 'https://example.com/avatar3.png',  '2024-01-03 10:00:00', '2024-01-04 10:00:00'),
+    ('user4',  '202cb962ac59075b964b07152d234b70', 'user4@example.com',  '13000000004', 0, 1, 'https://example.com/avatar4.png',  '2024-01-04 10:00:00', '2024-01-05 10:00:00'),
+    ('user5',  '202cb962ac59075b964b07152d234b70', 'user5@example.com',  '13000000005', 0, 0, 'https://example.com/avatar5.png',  '2024-01-05 10:00:00', '2024-01-06 10:00:00'),
+    ('user6',  '202cb962ac59075b964b07152d234b70', 'user6@example.com',  '13000000006', 1, 0, 'https://example.com/avatar6.png',  '2024-01-06 10:00:00', '2024-01-07 10:00:00'),
+    ('user7',  '202cb962ac59075b964b07152d234b70', 'user7@example.com',  '13000000007', 0, 0, 'https://example.com/avatar7.png',  '2024-01-07 10:00:00', '2024-01-08 10:00:00'),
+    ('user8',  '202cb962ac59075b964b07152d234b70', 'user8@example.com',  '13000000008', 0, 1, 'https://example.com/avatar8.png',  '2024-01-08 10:00:00', '2024-01-09 10:00:00'),
+    ('user9',  '202cb962ac59075b964b07152d234b70', 'user9@example.com',  '13000000009', 0, 0, 'https://example.com/avatar9.png',  '2024-01-09 10:00:00', '2024-01-10 10:00:00'),
+    ('user10', '202cb962ac59075b964b07152d234b70', 'user10@example.com', '13000000010', 0, 1, 'https://example.com/avatar10.png', '2024-01-10 10:00:00', '2024-01-11 10:00:00'),
+    ('user11', '202cb962ac59075b964b07152d234b70', 'user11@example.com', '13000000011', 1, 0, 'https://example.com/avatar11.png', '2024-01-11 10:00:00', '2024-01-12 10:00:00'),
+    ('user12', '202cb962ac59075b964b07152d234b70', 'user12@example.com', '13000000012', 0, 0, 'https://example.com/avatar12.png', '2024-01-12 10:00:00', '2024-01-13 10:00:00'),
+    ('user13', '202cb962ac59075b964b07152d234b70', 'user13@example.com', '13000000013', 0, 0, 'https://example.com/avatar13.png', '2024-01-13 10:00:00', '2024-01-14 10:00:00'),
+    ('user14', '202cb962ac59075b964b07152d234b70', 'user14@example.com', '13000000014', 0, 1, 'https://example.com/avatar14.png', '2024-01-14 10:00:00', '2024-01-15 10:00:00'),
+    ('user15', '202cb962ac59075b964b07152d234b70', 'user15@example.com', '13000000015', 0, 0, 'https://example.com/avatar15.png', '2024-01-15 10:00:00', '2024-01-16 10:00:00'),
+    ('user16', '202cb962ac59075b964b07152d234b70', 'user16@example.com', '13000000016', 1, 0, 'https://example.com/avatar16.png', '2024-01-16 10:00:00', '2024-01-17 10:00:00'),
+    ('user17', '202cb962ac59075b964b07152d234b70', 'user17@example.com', '13000000017', 0, 1, 'https://example.com/avatar17.png', '2024-01-17 10:00:00', '2024-01-18 10:00:00'),
+    ('user18', '202cb962ac59075b964b07152d234b70', 'user18@example.com', '13000000018', 0, 0, 'https://example.com/avatar18.png', '2024-01-18 10:00:00', '2024-01-19 10:00:00'),
+    ('user19', '202cb962ac59075b964b07152d234b70', 'user19@example.com', '13000000019', 0, 1, 'https://example.com/avatar19.png', '2024-01-19 10:00:00', '2024-01-20 10:00:00'),
+    ('user20', '202cb962ac59075b964b07152d234b70', 'user20@example.com', '13000000020', 0, 0, 'https://example.com/avatar20.png', '2024-01-20 10:00:00', '2024-01-21 10:00:00');

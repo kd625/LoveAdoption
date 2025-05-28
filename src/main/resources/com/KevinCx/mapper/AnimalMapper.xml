@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.KevinCx.mapper.AnimalMapper">
+
+
+    <update id="putById" parameterType="com.KevinCx.domain.pojo.Animal">
+        update animal
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="species!= null">
+                species = #{species},
+            </if>
+            <if test="age != null">
+                age = #{age},
+            </if>
+            <if test="gender!= null">
+                gender = #{gender},
+            </if>
+            <if test="description!= null">
+                description = #{description},
+            </if>
+            <if test="healthStatus!= null">
+                health_status = #{healthStatus},
+            </if>
+            <if test="imageUrl!= null">
+                image_url = #{imageUrl},
+            </if>
+            <if test="adoptionStatus!= null">
+                adoption_status = #{adoptionStatus},
+            </if>
+            <if test="updatedTime!= null">
+                updated_time = #{updatedTime},
+            </if>
+            <if test="deletedTime!= null">
+                deleted_time = #{deletedTime},
+            </if>
+            <if test="createdTime!= null">
+                created_time = #{createdTime},
+            </if>
+            <if test="breed!= null">
+                breed = #{breed},
+            </if>
+        </set>
+        where id = #{id};
+    </update>
+    <select id="page" resultType="com.KevinCx.domain.pojo.Animal"
+            parameterType="com.KevinCx.domain.query.AnimalQuery">
+        select * from animal
+        <where>
+            <if test="name != null and name != ''">
+                and name like concat('%', #{name}, '%')
+            </if>
+            <if test="species != null and species != ''">
+                and species like concat('%', #{species}, '%')
+            </if>
+            <if test="breed!= null">
+                and breed = #{breed}
+            </if>
+            <if test="gender!= null">
+                and gender = #{gender}
+            </if>
+        </where>
+    </select>
+</mapper>
