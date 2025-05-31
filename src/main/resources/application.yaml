@@ -1,0 +1,55 @@
+spring.application.name: LoveAdoption
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/LoveAdoption?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: 20050625
+  profiles:
+    active: dev
+
+logging:
+  level:
+    com:
+      KevinCx:
+        mapper: debug
+        service: info
+        controller: info
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs  # Swagger 的 JSON 文档访问地址
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html  # Knife4j 自动重定向到这里
+  group-configs:
+    - group: default
+      paths-to-match: /**  # 扫描的接口路径
+      packages-to-scan: com.KevinCx.controller  # 你的Controller包路径
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn  # 界面语言（可选 zh_cn、en）
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+la:
+  alioss:
+    endpoint:
+    access-key-id:
+    access-key-secret:
+    bucket-name:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    user-secret-key: vB8q/PzXgYn5tW1u0HkR7sVwF6dI4mJcC2oQ9eZ3aU8=
+    # 设置jwt过期时间
+    user-ttl: 720000000
+    # 设置前端传递过来的令牌名称
+    user-token-name: token
