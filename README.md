@@ -92,6 +92,25 @@ la:
     bucket-name: your_bucket_name
 ```
 
+连接自己的数据库：
+```yaml
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/LoveAdoption?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: your_username
+    password: your_password
+```
+
+### 添加数据库表
+找到项目根目录里的SQL文件夹，执行里面的SQL脚本，创建数据库表。
+里面还有两个测试数据
+
+### 启动项目
+```bash
+mvn spring-boot:run
+```
+
 ## 项目结构
 ```agsl
 src/
